@@ -8,6 +8,7 @@
   "types": "./lib/types/index.d.ts",
   "files": [
     "lib",
+    "cordis.patch.yml",
     "README.md",
     "LICENSE"
   ],
@@ -22,6 +23,10 @@
     "去水印"
   ],
   "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dragonsummer1/dsh-watermark-remover.git"
+  },
   "engines": {
     "dsh": ">=0.2.1"
   },
@@ -32,8 +37,8 @@
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": ">=4.0.0-rc.1 <5",
-    "@deepseek-ai/dsh-llm": ">=0.0.1-rc.1 <0.2.0 || >=0.2.0-0 <0.3.0",
-    "@deepseek-ai/dsh-tools": ">=0.0.1-rc.1 <0.2.0 || >=0.2.0-0 <0.3.0",
+    "@deepseek-ai/dsh-llm": ">=0.0.1-rc.1 <0.1.0 || >=0.1.0-rc.1 <0.2.0-0 || >=0.2.0-0 <0.3.0",
+    "@deepseek-ai/dsh-tools": ">=0.0.1-rc.1 <0.1.0 || >=0.1.0-rc.1 <0.2.0-0 || >=0.2.0-0 <0.3.0",
     "@deepseek-ai/schemastery": "^3.18.2"
   },
   "dependencies": {
