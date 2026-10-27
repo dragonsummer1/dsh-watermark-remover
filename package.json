@@ -1,0 +1,51 @@
+{
+  "name": "dsh-watermark-remover",
+  "version": "0.1.0",
+  "description": "结构级无损去水印：PDF 跨页 XObject 水印层与 Word 页眉艺术字水印，先分析候选再移除，不重绘正文（不栅格化、不 OCR）",
+  "private": false,
+  "type": "module",
+  "main": "./lib/index.js",
+  "types": "./lib/types/index.d.ts",
+  "files": [
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "dsh",
+    "deepseek-harness",
+    "watermark",
+    "watermark-remover",
+    "pdf",
+    "docx",
+    "去水印"
+  ],
+  "license": "BSD-3-Clause",
+  "engines": {
+    "dsh": ">=0.2.1"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4.0.0-rc.1 <5",
+    "@deepseek-ai/dsh-llm": ">=0.0.1-rc.1 <0.2.0 || >=0.2.0-0 <0.3.0",
+    "@deepseek-ai/dsh-tools": ">=0.0.1-rc.1 <0.2.0 || >=0.2.0-0 <0.3.0",
+    "@deepseek-ai/schemastery": "^3.18.2"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.18",
+    "pdf-lib": "^1.17.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "typescript": "^5.9.0"
+  },
+  "scripts": {
+    "build": "bash scripts/build.sh",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  }
+}

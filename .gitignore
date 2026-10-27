@@ -1,0 +1,15 @@
+node_modules/
+*.tsbuildinfo
+*.tgz
+
+# 测试运行产物
+test/sample-*
+test/out-*
+
+# 一次性分析脚本（针对特定样本文件，不随包分发）
+test/ascii-x21.mjs
+test/classify-x21.mjs
+test/extract-x21.mjs
+test/inspect-second.mjs
+test/verify-second.mjs
+test/candidates-second.mjs
